@@ -1,0 +1,10 @@
+version: '2'
+services:
+  tickit-gateway:
+    build: .
+    volumes:
+     - .:/usr/local/nonroot/app
+     - ./logs:/var/log/app
+     - /usr/local/nonroot/app/node_modules
+    ports:
+     - "8080:8080"

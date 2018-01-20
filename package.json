@@ -1,0 +1,40 @@
+{
+  "name": "gateway",
+  "version": "1.0.0",
+  "description": "API Gateway for Tickit",
+  "main": "index.js",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "cors": "^2.8.4",
+    "express": "^4.16.2",
+    "morgan": "^1.9.0",
+    "nconf": "^0.10.0",
+    "winston": "^2.4.0",
+    "winston-daily-rotate-file": "^1.7.2"
+  },
+  "devDependencies": {
+    "concurrently": "^3.5.1",
+    "eslint": "^4.16.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-watch": "^3.1.3",
+    "nodemon": "^1.14.11"
+  },
+  "scripts": {
+    "dev": "./node_modules/.bin/concurrently \"npm run lint:watch\" \"npm run nodemon\"",
+    "lint": "./node_modules/.bin/esw .",
+    "lint:watch": "./node_modules/.bin/esw --watch .",
+    "nodemon": "./node_modules/.bin/nodemon ./index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tickit-microservices/tickit_gateway.git"
+  },
+  "author": "thaopv",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tickit-microservices/tickit_gateway/issues"
+  },
+  "homepage": "https://github.com/tickit-microservices/tickit_gateway#readme"
+}
